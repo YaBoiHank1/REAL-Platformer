@@ -1,0 +1,11 @@
+Flashlight mechanic
+Forest tileset
+Player sprite/animations
+Start menu/UI
+Hazards
+- beartrap
+- 
+Death screen/game over
+pause menu
+Story
+
