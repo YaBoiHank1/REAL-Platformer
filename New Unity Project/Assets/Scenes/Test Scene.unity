@@ -858,7 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpSpeed: 2
+  jumpSpeed: 4
 --- !u!212 &1730137205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -935,7 +935,7 @@ Animator:
   m_GameObject: {fileID: 1730137200}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b893390a40c92e54f80e087ed3742e5c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3a55049deffc5e14ab672957060e0b43, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
