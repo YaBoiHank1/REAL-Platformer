@@ -35,7 +35,8 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         }
 		if (Input.GetButtonDown ("Jump") && grounded)
         {
-			gameObject.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, 100 * jumpSpeed));
+            myAnimator.SetBool("Jumping", true);
+            gameObject.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, 100 * jumpSpeed));
 		} 
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
@@ -47,13 +48,20 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         }
     }
 
-	public void Grounded(){
+	public void Grounded()
+    {
 		grounded = true;
 	}
 
-	public void NotGrounded(){
+	public void NotGrounded()
+    {
 		grounded = false;
 	}
+
+    public void StopAnimations()
+    {
+        myAnimator.speed = 0;
+    }
 
 	void OnCollisionExit2D(Collision2D collision){
 		if (collision.gameObject.layer == 8) {
@@ -66,6 +74,8 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         if (collision.gameObject.layer == 8)
         {
             grounded = true;
+            myAnimator.speed = 1;
+            myAnimator.SetBool("Jumping", false);
         }
     }
 
