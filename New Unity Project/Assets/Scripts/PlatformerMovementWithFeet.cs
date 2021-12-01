@@ -26,7 +26,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         if (velocity.x > 0 || velocity.x < 0)
         {
             myAnimator.SetBool("Moving", true);
-            myAnimator.SetBool("Idle", false);
+            //myAnimator.SetBool("Idle", false);
         }
         else if (velocity.x == 0)
         {
