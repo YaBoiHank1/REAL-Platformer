@@ -7,11 +7,15 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 	public float moveSpeed = 1.0f;
 	public float jumpSpeed = 1.0f;
 	private bool grounded = false;
-    private Animator myAnimator;
-    private SpriteRenderer myRenderer;
     public bool isAlive;
 
-	void Start ()
+    // Cached component references
+    private SpriteRenderer myRenderer;
+    private Animator myAnimator;
+    CapsuleCollider2D body;
+    BoxCollider2D feet;
+
+    void Start ()
     {
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
@@ -28,36 +32,48 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         }
         else if (isAlive == true)
         {
-            var moveX = Input.GetAxis("Horizontal");
-            var velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
-            velocity.x = moveX * moveSpeed;
-            gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
-            if (velocity.x > 0 || velocity.x < 0)
-            {
-                myAnimator.SetBool("Moving", true);
-            }
-            else if (velocity.x == 0)
-            {
-                myAnimator.SetBool("Moving", false);
-            }
-            if (Input.GetButtonDown("Jump") && grounded)
-            {
-                myAnimator.SetBool("Jumping", true);
-                gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * jumpSpeed));
-            }
-            if (Input.GetAxisRaw("Horizontal") > 0)
-            {
-                myRenderer.flipX = false;
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0)
-            {
-                myRenderer.flipX = true;
-            }
+            Movement();
+            Jump();
+            
         }
 		
     }
 
-	public void Grounded()
+    public void Movement()
+    {
+        var moveX = Input.GetAxis("Horizontal");
+        var velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+        velocity.x = moveX * moveSpeed;
+        gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
+        if (velocity.x > 0 || velocity.x < 0)
+        {
+            myAnimator.SetBool("Moving", true);
+        }
+        else if (velocity.x == 0)
+        {
+            myAnimator.SetBool("Moving", false);
+        }
+    }
+
+    public void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && grounded)
+        {
+            myAnimator.SetBool("Jumping", true);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * jumpSpeed));
+        }
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            myRenderer.flipX = false;
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            myRenderer.flipX = true;
+        }
+    }
+
+
+    public void Grounded()
     {
 		grounded = true;
 	}
