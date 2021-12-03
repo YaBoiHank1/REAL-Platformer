@@ -123,11 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &721917327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5419945117597250535, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+  m_PrefabInstance: {fileID: 1227040030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &721917328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5419945117597250529, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
   m_PrefabInstance: {fileID: 1227040030}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &721917329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721917327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3310e6a82759684fa856a49a319d2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinPickupSFX: {fileID: 0}
+  CoinValue: 100
 --- !u!1 &1122293105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,3 +1068,48 @@ CapsuleCollider2D:
   m_Offset: {x: -0.02582717, y: -0.10720274}
   m_Size: {x: 0.430964, y: 0.49510485}
   m_Direction: 0
+--- !u!1 &1436226786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436226788}
+  - component: {fileID: 1436226787}
+  m_Layer: 0
+  m_Name: Coin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1436226787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436226786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3310e6a82759684fa856a49a319d2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinPickupSFX: {fileID: 0}
+  CoinValue: 100
+--- !u!4 &1436226788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436226786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.166558, y: 0.3539765, z: -985.8322}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
