@@ -114,7 +114,8 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     }
 
 	void OnCollisionExit2D(Collision2D collision){
-		if (collision.gameObject.layer == 8) {
+		if (collision.gameObject.layer == 8 || collision.gameObject.layer == 9)
+        {
 			grounded = false;
 		}
 	}
