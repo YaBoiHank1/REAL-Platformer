@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlatformerMovementWithFeet : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public int flesh;
 	private bool grounded = false;
     public bool isAlive;
+    public Image HealthIcon;
+    public Image HealthBar;
 
     // Cached component references
     private SpriteRenderer myRenderer;
@@ -36,14 +39,6 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             isAlive = false;
         }
-        if (health > 0)
-        {
-            flesh = health - 1;
-        }
-        else if (health < 0)
-        {
-            flesh = 0;
-        }
         if (isAlive == false)
         {
             return;
@@ -53,8 +48,40 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             Movement();
             Jump();
         }
-		
+
+        if (health > 5)
+        {
+            health = 5;
+        }
+        
+        if (health == 1)
+        {
+            HealthIcon.GetComponent<HealthIcon>().SetImageOne();
+            HealthBar.fillAmount = 0.219f;
+        }
+        if (health == 2)
+        {
+            HealthIcon.GetComponent<HealthIcon>().SetImageTwo();
+            HealthBar.fillAmount = 0.472f;
+        }
+        if (health == 3)
+        {
+            HealthIcon.GetComponent<HealthIcon>().SetImageThree();
+            HealthBar.fillAmount = 0.632f;
+        }
+        if (health == 4)
+        {
+            HealthIcon.GetComponent<HealthIcon>().SetImageFour();
+            HealthBar.fillAmount = 0.884f;
+        }
+        if (health == 5)
+        {
+            HealthIcon.GetComponent<HealthIcon>().SetImageFive();
+            HealthBar.fillAmount = 1f;
+        }
     }
+
+    
 
     public void AddToHealth(int CoinValue)
     {
@@ -127,9 +154,14 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             myAnimator.speed = 1;
             myAnimator.SetBool("Jumping", false);
         }
+        if (collision.gameObject.layer == 10)
+        {
+
+        }
         if (collision.gameObject.layer == 9)
         {
-            health = health - 1;
+            grounded = true;
+            health--;
         }
     }
 
