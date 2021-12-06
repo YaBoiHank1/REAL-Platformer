@@ -6,6 +6,8 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 	// Use this for initialization
 	public float moveSpeed = 1.0f;
 	public float jumpSpeed = 1.0f;
+    public int health = 1;
+    public int flesh;
 	private bool grounded = false;
     public bool isAlive;
 
@@ -17,6 +19,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 
     void Start ()
     {
+        health = FindObjectOfType<GameSession>().playerHealth;
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
         myAnimator.SetBool("Moving", false);
@@ -26,6 +29,22 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (health > 0)
+        {
+            isAlive = true;
+        }
+        else if (health <= 0)
+        {
+            isAlive = false;
+        }
+        if (health > 0)
+        {
+            flesh = health - 1;
+        }
+        else if (health < 0)
+        {
+            flesh = 0;
+        }
         if (isAlive == false)
         {
             return;
@@ -34,10 +53,16 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             Movement();
             Jump();
-            
         }
 		
     }
+
+    public void AddToHealth(int CoinValue)
+    {
+        health += CoinValue;
+    }
+
+    
 
     public void Movement()
     {
@@ -104,7 +129,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         }
         if (collision.gameObject.layer == 9)
         {
-            isAlive = false;
+            health = health - 1;
         }
     }
 
