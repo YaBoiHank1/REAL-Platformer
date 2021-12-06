@@ -6,11 +6,13 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 
 	// Use this for initialization
 	public float moveSpeed = 1.0f;
+    public float climbSpeed = 1.0f;
 	public float jumpSpeed = 1.0f;
     public int health = 1;
     public int flesh;
 	private bool grounded = false;
     public bool isAlive;
+    public bool canClimb;
     public Image HealthIcon;
     public Image HealthBar;
 
@@ -19,11 +21,13 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     private Animator myAnimator;
     CapsuleCollider2D body;
     BoxCollider2D feet;
+    Rigidbody2D myRigidbody;
 
     void Start ()
     {
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
+        myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         myAnimator.SetBool("Moving", false);
         isAlive = true;
 	}
@@ -47,6 +51,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             Movement();
             Jump();
+            ClimbLadder();
         }
 
         if (health > 5)
@@ -104,6 +109,20 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             myAnimator.SetBool("Moving", false);
         }
+        
+    }
+
+    public void ClimbLadder()
+    {
+        if (Input.GetKeyDown(KeyCode.W) && canClimb)
+        {
+            float controlThrow = Input.GetAxis("Horizontal");
+            Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, controlThrow * climbSpeed);
+        }
+        else if (!canClimb)
+        {
+            return;
+        }
     }
 
     public void Jump()
@@ -144,7 +163,8 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
 			grounded = false;
 		}
-	}
+        
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -154,10 +174,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             myAnimator.speed = 1;
             myAnimator.SetBool("Jumping", false);
         }
-        if (collision.gameObject.layer == 10)
-        {
-
-        }
+        
         if (collision.gameObject.layer == 9)
         {
             grounded = true;
@@ -170,6 +187,31 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         if (collision.gameObject.layer == 8)
         {
             grounded = true;
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            grounded = true;
+            canClimb = true;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            grounded = true;
+            canClimb = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            canClimb = false;
         }
     }
 }
