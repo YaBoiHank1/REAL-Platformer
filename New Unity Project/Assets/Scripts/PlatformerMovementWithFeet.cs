@@ -19,7 +19,6 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 
     void Start ()
     {
-        health = FindObjectOfType<GameSession>().playerHealth;
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
         myAnimator.SetBool("Moving", false);
