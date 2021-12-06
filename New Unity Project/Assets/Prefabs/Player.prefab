@@ -188,6 +188,8 @@ MonoBehaviour:
   health: 1
   flesh: 0
   isAlive: 0
+  HealthIcon: {fileID: 0}
+  HealthBar: {fileID: 0}
 --- !u!50 &5419945117597250532
 Rigidbody2D:
   serializedVersion: 4

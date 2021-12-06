@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    public int playerHealth = 1;
+    public int score;
+    bool healthAdd;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = 0;
     }
 
-    public void AddToHealth(int CoinValue)
+    public void AddToScore(int points)
     {
-        playerHealth += CoinValue;
+        score += points;
+        IncreaseHealth();
+    }
+
+    public void IncreaseHealth()
+    {
+        if (score == 5 || score == 10 || score == 15 || score == 20)
+        {
+            FindObjectOfType<PlatformerMovementWithFeet>().health++;
+        }
     }
 
     // Update is called once per frame
