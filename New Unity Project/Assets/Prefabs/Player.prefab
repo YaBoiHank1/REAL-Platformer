@@ -184,10 +184,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  climbSpeed: 5
   jumpSpeed: 4
   health: 1
   flesh: 0
   isAlive: 0
+  canClimb: 0
   HealthIcon: {fileID: 0}
   HealthBar: {fileID: 0}
 --- !u!50 &5419945117597250532

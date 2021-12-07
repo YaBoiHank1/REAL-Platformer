@@ -22,12 +22,15 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     CapsuleCollider2D body;
     BoxCollider2D feet;
     Rigidbody2D myRigidbody;
+    float GravityScaleInit;
 
     void Start ()
     {
+        feet = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        GravityScaleInit = myRigidbody.gravityScale;
         myAnimator.SetBool("Moving", false);
         isAlive = true;
 	}
@@ -41,6 +44,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         }
         else if (health <= 0)
         {
+            HealthBar.fillAmount = 0f;
             isAlive = false;
         }
         if (isAlive == false)
@@ -114,15 +118,21 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 
     public void ClimbLadder()
     {
-        if (Input.GetKeyDown(KeyCode.W) && canClimb)
+        if (!feet.IsTouchingLayers(LayerMask.GetMask("Ladders")))
         {
-            float controlThrow = Input.GetAxis("Horizontal");
-            Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, controlThrow * climbSpeed);
-        }
-        else if (!canClimb)
-        {
+            //canClimb = false;
+            myAnimator.SetBool("Climbing", false);
+            myRigidbody.gravityScale = GravityScaleInit;
             return;
+            
         }
+        //canClimb = true;
+        float controlThrow = Input.GetAxis("Vertical");
+        Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, controlThrow * climbSpeed);
+        myRigidbody.velocity = climbVelocity;
+        myRigidbody.gravityScale = 0f;
+        bool VertSpeed = Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon;
+        myAnimator.SetBool("Climbing", true);
     }
 
     public void Jump()
@@ -197,6 +207,10 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             grounded = true;
             canClimb = true;
+        }
+        if (collision.gameObject.layer == 11)
+        {
+            health = 0;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
