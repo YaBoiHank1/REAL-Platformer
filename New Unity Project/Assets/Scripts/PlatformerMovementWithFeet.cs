@@ -44,6 +44,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         }
         else if (health <= 0)
         {
+            HealthBar.fillAmount = 0f;
             isAlive = false;
         }
         if (isAlive == false)
@@ -206,6 +207,10 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             grounded = true;
             canClimb = true;
+        }
+        if (collision.gameObject.layer == 11)
+        {
+            health = 0;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
