@@ -5,9 +5,12 @@ using UnityEngine;
 public class BearTrap : MonoBehaviour
 {
     Animator myAnimator;
+    BoxCollider2D myCollider;
     // Start is called before the first frame update
     void Start()
     {
+        myCollider = GetComponent<BoxCollider2D>();
+        myCollider.isTrigger = false;
         myAnimator = GetComponent<Animator>();
     }
 
@@ -22,6 +25,7 @@ public class BearTrap : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             myAnimator.SetBool("Shut", true);
+            myCollider.isTrigger = true;
         }
     }
 }
