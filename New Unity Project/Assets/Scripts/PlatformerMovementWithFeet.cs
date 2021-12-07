@@ -119,19 +119,19 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     {
         if (!feet.IsTouchingLayers(LayerMask.GetMask("Ladders")))
         {
-            canClimb = false;
-            //myAnimator.SetBool("climb", false);
+            //canClimb = false;
+            myAnimator.SetBool("Climbing", false);
             myRigidbody.gravityScale = GravityScaleInit;
             return;
             
         }
-        canClimb = true;
+        //canClimb = true;
         float controlThrow = Input.GetAxis("Vertical");
         Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, controlThrow * climbSpeed);
         myRigidbody.velocity = climbVelocity;
         myRigidbody.gravityScale = 0f;
         bool VertSpeed = Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon;
-        //myAnimator.SetBool("climb", VertSpeed);
+        myAnimator.SetBool("Climbing", true);
     }
 
     public void Jump()
