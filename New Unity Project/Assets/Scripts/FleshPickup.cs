@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinPickup : MonoBehaviour
+public class FleshPickup : MonoBehaviour
 {
-    
-    [SerializeField] int CoinValue = 1;
+    [SerializeField] int FleshValue = 1;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        FindObjectOfType<GameSession>().AddToScore(CoinValue);
+        FindObjectOfType<GameSession>().AddToScore(FleshValue);
         Destroy(gameObject);
     }
 }
