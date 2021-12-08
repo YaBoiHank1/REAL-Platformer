@@ -11,6 +11,5 @@ public class CoinPickup : MonoBehaviour
     {
         FindObjectOfType<GameSession>().AddToScore(CoinValue);
         Destroy(gameObject);
-
     }
 }
