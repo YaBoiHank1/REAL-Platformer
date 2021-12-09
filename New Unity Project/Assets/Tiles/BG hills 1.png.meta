@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 5818c6fc34fc0b149a70e8feb3ebe90d
+guid: 12147fd978a0ac1498a6f0d71bd7e9d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1901874150439414374
-    second: BG trees white_0
+      213: -4664497275371406892
+    second: BG hills 1_0
   - first:
-      213: -8373112303321171661
-    second: BG trees white_1
+      213: -3493443768344328968
+    second: BG hills 1_1
   - first:
-      213: 8221672252854766202
-    second: BG trees white_2
+      213: 3539004956987020530
+    second: BG hills 1_2
+  - first:
+      213: -8755915202559543327
+    second: BG hills 1_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG trees white_0
+      name: BG hills 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 588
-        width: 588
-        height: 588
+        y: 288
+        width: 288
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66a60789670d46a10800000000000000
-      internalID: 1901874150439414374
+      spriteID: 4d9b5bd0170644fb0800000000000000
+      internalID: -4664497275371406892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BG trees white_1
+      name: BG hills 1_1
       rect:
         serializedVersion: 2
-        x: 588
-        y: 588
-        width: 588
-        height: 588
+        x: 288
+        y: 288
+        width: 288
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 339b61809babccb80800000000000000
-      internalID: -8373112303321171661
+      spriteID: 8f4c809d66bc48fc0800000000000000
+      internalID: -3493443768344328968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BG trees white_2
+      name: BG hills 1_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 588
-        height: 588
+        width: 288
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +183,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7a081b8a5f391270800000000000000
-      internalID: 8221672252854766202
+      spriteID: 2f4de8702421d1130800000000000000
+      internalID: 3539004956987020530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG hills 1_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7fefb938dbc7680800000000000000
+      internalID: -8755915202559543327
       vertices: []
       indices: 
       edges: []

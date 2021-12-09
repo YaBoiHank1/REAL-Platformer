@@ -169,28 +169,12 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     }
 
 	void OnCollisionExit2D(Collision2D collision){
-		if (collision.gameObject.layer == 8 || collision.gameObject.layer == 9)
-        {
-			grounded = false;
-		}
+		
         
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8)
-        {
-            grounded = true;
-            myAnimator.speed = 1;
-            myAnimator.SetBool("Jumping", false);
-        }
-        
-        if (collision.gameObject.layer == 9)
-        {
-            grounded = true;
-            health--;
-        }
-
         if (collision.gameObject.layer == 12)
         {
             grounded = true;
@@ -200,10 +184,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8)
-        {
-            grounded = true;
-        }
+        
         
     }
 
@@ -218,6 +199,20 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             health = 0;
         }
+        if (collision.gameObject.layer == 8)
+        {
+            grounded = true;
+            myAnimator.speed = 1;
+            myAnimator.SetBool("Jumping", false);
+        }
+
+        if (collision.gameObject.layer == 9)
+        {
+            grounded = true;
+            health--;
+        }
+
+        
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -226,12 +221,20 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             grounded = true;
             canClimb = true;
         }
+        if (collision.gameObject.layer == 8)
+        {
+            grounded = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 10)
         {
             canClimb = false;
+        }
+        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 9)
+        {
+            grounded = false;
         }
     }
 }
