@@ -190,6 +190,12 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             grounded = true;
             health--;
         }
+
+        if (collision.gameObject.layer == 12)
+        {
+            grounded = true;
+            health--;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
