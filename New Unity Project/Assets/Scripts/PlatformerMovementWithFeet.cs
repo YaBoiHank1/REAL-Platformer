@@ -13,9 +13,11 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 	private bool grounded = false;
     public bool isAlive;
     public bool canClimb;
+    bool escPressed;
     public Image HealthIcon;
     public Image HealthBar;
     public Canvas deathCanvas;
+    public Canvas pauseCanvas;
 
     // Cached component references
     private SpriteRenderer myRenderer;
@@ -35,13 +37,16 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         GravityScaleInit = myRigidbody.gravityScale;
         myAnimator.SetBool("Moving", false);
         isAlive = true;
+        escPressed = false;
         deathCanvas.enabled = false;
+        pauseCanvas.enabled = false;
         
 	}
 
 	// Update is called once per frame
 	void Update ()
     {
+        
         if (health > 0)
         {
             isAlive = true;
@@ -61,6 +66,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             Movement();
             Jump();
             ClimbLadder();
+            PauseMenu();
         }
         if (health > 5)
         {
@@ -93,7 +99,21 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         }
     }
 
-    
+    public void PauseMenu()
+    {
+        if (Input.GetButtonDown("Cancel") && escPressed == false)
+        {
+            Time.timeScale = 0;
+            pauseCanvas.enabled = true;
+            escPressed = true;
+        }
+        else if (Input.GetButtonDown("Cancel") && escPressed == true)
+        {
+            Time.timeScale = 1;
+            pauseCanvas.enabled = false;
+            escPressed = false;
+        }
+    }
 
     public void AddToHealth(int CoinValue)
     {
