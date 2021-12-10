@@ -193,6 +193,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         if (collision.gameObject.layer == 12)
         {
             grounded = true;
+            myAnimator.speed = 1;
             health--;
         }
     }
@@ -202,6 +203,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         if (collision.gameObject.layer == 10)
         {
             grounded = true;
+            myAnimator.speed = 1;
             canClimb = true;
         }
         if (collision.gameObject.layer == 11)
@@ -212,12 +214,14 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             grounded = true;
             myAnimator.speed = 1;
+            myAnimator.speed = 1;
             myAnimator.SetBool("Jumping", false);
         }
 
         if (collision.gameObject.layer == 9)
         {
             grounded = true;
+            myAnimator.speed = 1;
             health--;
         }
     }
@@ -228,10 +232,12 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             grounded = true;
             canClimb = true;
+            myAnimator.speed = 1;
         }
         if (collision.gameObject.layer == 8)
         {
             grounded = true;
+            myAnimator.speed = 1;
         }
     }
 
