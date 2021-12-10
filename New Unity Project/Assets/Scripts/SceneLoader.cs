@@ -19,6 +19,7 @@ public class SceneLoader : MonoBehaviour
     }
     public void RetryLevel()
     {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
     public void QuitGame()
