@@ -391,7 +391,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadStartScene
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -466,7 +466,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Esc to resume game
+  m_text: 'press esc to resume game
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ccf4055e1f66aa499dd92568ea3bed9, type: 2}
   m_sharedMaterial: {fileID: -3723560989138736876, guid: 5ccf4055e1f66aa499dd92568ea3bed9, type: 2}
