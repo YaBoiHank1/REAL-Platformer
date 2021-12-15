@@ -9,13 +9,18 @@ public class DialougeManager : MonoBehaviour
     public Text dialougeText;
 
     public Animator myAnimator;
+
+    public AudioClip typeSound;
+    public AudioSource audioSource;
     
     private Queue<string> sentences;
    
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         sentences = new Queue<string>();
+        audioSource.Stop();
     }
 
     public void StartDialouge (Dialouge dialouge)
@@ -45,17 +50,20 @@ public class DialougeManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
+        audioSource.Play();
         dialougeText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialougeText.text += letter;
             yield return null;
         }
+        audioSource.Stop();
     }
 
     void EndDialouge()
     {
         myAnimator.SetBool("IsOpen", false);
+        audioSource.Stop();
         Debug.Log("End of conversation");
     }
 
