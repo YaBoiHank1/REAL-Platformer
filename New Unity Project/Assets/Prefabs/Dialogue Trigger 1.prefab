@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.0362448}
+  m_Offset: {x: -0.4402752, y: 1.9330976}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.0724895}
+  m_Size: {x: 0.8695488, y: 4.866195}
   m_EdgeRadius: 0
 --- !u!114 &4417257194500431412
 MonoBehaviour:
@@ -71,5 +71,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialouge:
-    name: 
-    sentences: []
+    name: You
+    sentences:
+    - '*Yawn* That was a pretty good nap if I do say so myself.'
+    - ...........................................................................................................................................................................................................................................
+    - ...........................................................................................................................................................................................................................................
+    - 'Well, it would appear that I have misplaced all of my skin, muscles, and internal
+      organs.
+
+'
+    - What a peculiar turn of events...

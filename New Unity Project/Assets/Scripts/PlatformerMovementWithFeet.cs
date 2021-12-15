@@ -18,6 +18,9 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public Image HealthBar;
     public Canvas deathCanvas;
     public Canvas pauseCanvas;
+    public AudioClip jumpFX;
+    public AudioClip hurtFX;
+    public AudioClip deathFX;
 
     // Cached component references
     private SpriteRenderer myRenderer;
@@ -56,6 +59,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             HealthBar.fillAmount = 0f;
             isAlive = false;
             deathCanvas.enabled = true;
+            
         }
         if (isAlive == false)
         {
@@ -160,8 +164,10 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     {
         if (Input.GetButtonDown("Jump") && grounded)
         {
+            
             myAnimator.SetBool("Jumping", true);
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * jumpSpeed));
+            AudioSource.PlayClipAtPoint(jumpFX, Camera.main.transform.position);
         }
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
@@ -195,6 +201,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             grounded = true;
             myAnimator.speed = 1;
             health--;
+            AudioSource.PlayClipAtPoint(hurtFX, Camera.main.transform.position);
         }
     }
 
@@ -209,6 +216,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         if (collision.gameObject.layer == 11)
         {
             health = 0;
+            AudioSource.PlayClipAtPoint(deathFX, Camera.main.transform.position);
         }
         if (collision.gameObject.layer == 8)
         {
@@ -222,6 +230,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             grounded = true;
             myAnimator.speed = 1;
             health--;
+            AudioSource.PlayClipAtPoint(hurtFX, Camera.main.transform.position);
         }
         if (collision.gameObject.layer == 13)
         {
