@@ -11,6 +11,8 @@ public class GameSession : MonoBehaviour
     void Start()
     {
         score = 0;
+        //FindObjectOfType<DialougeTrigger>().TriggerDialouge();
+        //FindObjectOfType<GameSession>().GetComponent<DialougeTrigger>().TriggerDialouge();
     }
 
     public void AddToScore(int points)

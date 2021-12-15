@@ -217,12 +217,15 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             myAnimator.speed = 1;
             myAnimator.SetBool("Jumping", false);
         }
-
         if (collision.gameObject.layer == 9)
         {
             grounded = true;
             myAnimator.speed = 1;
             health--;
+        }
+        if (collision.gameObject.layer == 13)
+        {
+            FindObjectOfType<DialougeTrigger>().TriggerDialouge();
         }
     }
 
