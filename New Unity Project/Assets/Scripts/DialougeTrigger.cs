@@ -9,5 +9,6 @@ public class DialougeTrigger : MonoBehaviour
     public void TriggerDialouge()
     {
         FindObjectOfType<DialougeManager>().StartDialouge(dialouge);
+        Destroy(gameObject);
     }
 }
