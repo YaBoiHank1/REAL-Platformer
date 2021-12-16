@@ -6,6 +6,7 @@ public class BearTrap : MonoBehaviour
 {
     Animator myAnimator;
     BoxCollider2D myCollider;
+    public AudioClip TrapFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class BearTrap : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             myAnimator.SetBool("Shut", true);
+            AudioSource.PlayClipAtPoint(TrapFX, Camera.main.transform.position);
             myCollider.isTrigger = true;
         }
     }

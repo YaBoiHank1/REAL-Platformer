@@ -5,7 +5,7 @@ using UnityEngine;
 public class CoinPickup : MonoBehaviour
 {
     [SerializeField] int CoinValue = 1;
-    [SerializeField] AudioClip fleshFX;
+    public AudioClip fleshFX;
     
     private void OnTriggerEnter2D(Collider2D other)
     {

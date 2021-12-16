@@ -3,7 +3,8 @@ guid: b3310e6a82759684fa856a49a319d2a0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - fleshFX: {fileID: 8300000, guid: 0db057ee2cbecd942881b5a0276f6808, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
