@@ -142,3 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d19ad968220d134d962966f0c998b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrapFX: {fileID: 8300000, guid: d206fb627ffde8645911647dc771b441, type: 3}

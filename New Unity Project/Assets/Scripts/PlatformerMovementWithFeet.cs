@@ -21,6 +21,10 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public AudioClip jumpFX;
     public AudioClip hurtFX;
     public AudioClip deathFX;
+    public Color damageColor;
+    public Color healthUpColor;
+    public Color defaultColor;
+    private Renderer renderer;
 
     // Cached component references
     private SpriteRenderer myRenderer;
@@ -33,6 +37,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 
     void Start ()
     {
+        renderer = GetComponent<Renderer>();
         feet = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
@@ -122,6 +127,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public void AddToHealth(int CoinValue)
     {
         health += CoinValue;
+        healthFlash();
     }
 
     public void Movement()
@@ -201,6 +207,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             grounded = true;
             myAnimator.speed = 1;
             health--;
+            damageFlash();
             AudioSource.PlayClipAtPoint(hurtFX, Camera.main.transform.position);
         }
     }
@@ -231,6 +238,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             myAnimator.speed = 1;
             health--;
             AudioSource.PlayClipAtPoint(hurtFX, Camera.main.transform.position);
+            damageFlash();
         }
         if (collision.gameObject.layer == 13)
         {
@@ -263,5 +271,19 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             grounded = false;
         }
+    }
+
+    IEnumerator damageFlash()
+    {
+        renderer.material.color = damageColor;
+        yield return new WaitForSeconds(0.5f);
+        renderer.material.color = defaultColor;
+    }
+
+    IEnumerator healthFlash()
+    {
+        renderer.material.color = healthUpColor;
+        yield return new WaitForSeconds(0.5f);
+        renderer.material.color = defaultColor;
     }
 }

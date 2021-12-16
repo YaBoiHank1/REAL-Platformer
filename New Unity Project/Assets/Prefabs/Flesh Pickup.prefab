@@ -133,3 +133,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinValue: 1
+  fleshFX: {fileID: 8300000, guid: 694e280f9d769c04f84c44b246e789a1, type: 3}
