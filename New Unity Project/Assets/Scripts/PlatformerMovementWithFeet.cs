@@ -9,6 +9,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public float climbSpeed = 1.0f;
 	public float jumpSpeed = 1.0f;
     public int health = 1;
+    public float flashTime;
     public int flesh;
 	private bool grounded = false;
     public bool isAlive;
@@ -24,7 +25,6 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public Color damageColor;
     public Color healthUpColor;
     public Color defaultColor;
-    private Renderer renderer;
 
     // Cached component references
     private SpriteRenderer myRenderer;
@@ -37,12 +37,13 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 
     void Start ()
     {
-        renderer = GetComponent<Renderer>();
+        
         feet = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         GravityScaleInit = myRigidbody.gravityScale;
+        defaultColor = myRenderer.color;
         myAnimator.SetBool("Moving", false);
         isAlive = true;
         escPressed = false;
@@ -127,7 +128,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public void AddToHealth(int CoinValue)
     {
         health += CoinValue;
-        healthFlash();
+        //healthFlash();
     }
 
     public void Movement()
@@ -273,17 +274,14 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         }
     }
 
-    IEnumerator damageFlash()
+    void damageFlash()
     {
-        renderer.material.color = damageColor;
-        yield return new WaitForSeconds(0.5f);
-        renderer.material.color = defaultColor;
+        myRenderer.color = damageColor;
+        Invoke("ResetColor", flashTime);
     }
 
-    IEnumerator healthFlash()
+    void ResetColor()
     {
-        renderer.material.color = healthUpColor;
-        yield return new WaitForSeconds(0.5f);
-        renderer.material.color = defaultColor;
+        myRenderer.color = defaultColor;
     }
 }

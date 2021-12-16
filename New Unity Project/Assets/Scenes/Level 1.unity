@@ -31205,6 +31205,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1912760052}
     - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: flashTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
       propertyPath: HealthIcon
       value: 
       objectReference: {fileID: 137538480}
@@ -31216,6 +31220,54 @@ PrefabInstance:
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 2063132913}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: damageColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: damageColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: damageColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: damageColor.r
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: defaultColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: defaultColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: defaultColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: defaultColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: healthUpColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: healthUpColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: healthUpColor.g
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419945117597250531, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
+      propertyPath: healthUpColor.r
+      value: 0.056062695
+      objectReference: {fileID: 0}
     - target: {fileID: 5419945117597250535, guid: c733cece10f25254b8f349396bf0e64d, type: 3}
       propertyPath: m_Name
       value: Player
