@@ -2006,7 +2006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090952209530142855, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4090952209530142855, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2014,7 +2014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090952209530142855, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4090952209530142855, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2058,7 +2058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090952209530142855, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -179
+      value: 87
       objectReference: {fileID: 0}
     - target: {fileID: 4090952209530142855, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2076,14 +2076,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2079357361}
-    - target: {fileID: 4090952210588789561, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayNextSentence
-      objectReference: {fileID: 0}
-    - target: {fileID: 4090952210588789561, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialougeManager, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
 --- !u!1001 &948059529
@@ -2815,6 +2807,18 @@ PrefabInstance:
     - target: {fileID: 1303964305230347336, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
       propertyPath: m_Name
       value: Pause Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303964305231302096, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303964305231302096, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303964305231302096, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -93
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
