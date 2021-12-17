@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 179913561613489541}
   - component: {fileID: 179913561613489542}
   - component: {fileID: 179913561613489543}
-  - component: {fileID: 179913561613489536}
   - component: {fileID: 179913561613489537}
   m_Layer: 12
   m_Name: enemy (2)_0
@@ -170,21 +169,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.006606235, y: -0.0049441443}
   m_Size: {x: 0.49997938, y: 1.2022958}
   m_Direction: 0
---- !u!111 &179913561613489536
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179913561613489538}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 34385b9767b7e6c48be2cea8e1ad723c, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 1
-  m_CullingType: 0
 --- !u!114 &179913561613489537
 MonoBehaviour:
   m_ObjectHideFlags: 0

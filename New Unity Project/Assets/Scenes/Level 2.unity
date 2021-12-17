@@ -216,7 +216,7 @@ RectTransform:
   m_Children:
   - {fileID: 918733174}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7824,6 +7824,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 179913561613489658, guid: 3f6e20354552e7f49948bfd9227524e2, type: 3}
   m_PrefabInstance: {fileID: 690377437}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &711088576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1206493591604419366, guid: 27f9a9aaee2d70c439f2c69e2711cfde, type: 3}
+  m_PrefabInstance: {fileID: 1745018272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c7240f3f5b10d428b29844a1f9f321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &741586776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7984,6 +7995,10 @@ PrefabInstance:
     - target: {fileID: 1303964305230347336, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
       propertyPath: m_Name
       value: Pause Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303964305230347336, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1303964305231302096, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
       propertyPath: m_AnchorMax.y
@@ -21147,6 +21162,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4090952210588789561, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 711088576}
+    - target: {fileID: 4090952210588789561, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
 --- !u!224 &918733174 stripped
@@ -21352,6 +21375,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 272646929850072836, guid: c2270f4f313bb3746b1e9d364df30184, type: 3}
   m_PrefabInstance: {fileID: 1035678972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1060273267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692214, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_Name
+      value: Dialogue Trigger 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692215, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_Size.y
+      value: 6.2348137
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692215, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.6174068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417257194500431412, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: dialouge.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417257194500431412, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: dialouge.sentences.Array.data[0]
+      value: Ah! Lo, the humble farm!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417257194500431412, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: dialouge.sentences.Array.data[1]
+      value: Perhaps I can find some respite here after my harrowing trek through
+        that forest.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417257194500431412, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: dialouge.sentences.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
 --- !u!1001 &1079120539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70713,7 +70818,7 @@ PrefabInstance:
       objectReference: {fileID: 533715870}
     - target: {fileID: 1206493591604419367, guid: 27f9a9aaee2d70c439f2c69e2711cfde, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1206493591604419367, guid: 27f9a9aaee2d70c439f2c69e2711cfde, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70836,11 +70941,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.33
+      value: 8.87
       objectReference: {fileID: 0}
     - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.54
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 1388113116116692168, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70877,6 +70982,31 @@ PrefabInstance:
     - target: {fileID: 1388113116116692214, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
       propertyPath: m_Name
       value: Dialogue Trigger 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692215, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_Size.y
+      value: 11.933617
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388113116116692215, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: m_Offset.y
+      value: 5.4668083
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417257194500431412, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: dialouge.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417257194500431412, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: dialouge.sentences.Array.data[0]
+      value: These farmers have gone insane.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417257194500431412, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: dialouge.sentences.Array.data[1]
+      value: Could it be the flesh driving them mad?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417257194500431412, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}
+      propertyPath: dialouge.sentences.Array.data[2]
+      value: Or is it just me, the walking, talking skeleton, freshly risen from
+        the grave?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e98ee15d5c186a46b04f45c70683d1e, type: 3}

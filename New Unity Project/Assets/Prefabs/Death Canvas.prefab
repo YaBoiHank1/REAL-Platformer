@@ -231,7 +231,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3901705424483405242, guid: 0529d37ef8e379148ba65e6d3a6553aa, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: RetryLevel
         m_Mode: 1
@@ -350,8 +350,8 @@ RectTransform:
   m_Father: {fileID: 427180334296346741}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2.9747, y: 62}
   m_SizeDelta: {x: 1089.8296, y: 173.3368}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3901705424483405242, guid: 0529d37ef8e379148ba65e6d3a6553aa, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1

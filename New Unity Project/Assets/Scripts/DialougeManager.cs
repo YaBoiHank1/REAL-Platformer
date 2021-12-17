@@ -9,8 +9,7 @@ public class DialougeManager : MonoBehaviour
     public Text dialougeText;
 
     public Animator myAnimator;
-
-    public AudioClip typeSound;
+    
     public AudioSource audioSource;
     
     private Queue<string> sentences;

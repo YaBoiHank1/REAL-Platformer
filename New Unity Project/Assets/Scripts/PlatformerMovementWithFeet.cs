@@ -22,6 +22,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public AudioClip jumpFX;
     public AudioClip hurtFX;
     public AudioClip deathFX;
+    public AudioSource audioSource;
     public Color damageColor;
     public Color healthUpColor;
     public Color defaultColor;
@@ -37,7 +38,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 
     void Start ()
     {
-        
+        audioSource = GetComponent<AudioSource>();
         feet = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
@@ -140,10 +141,19 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         if (velocity.x > 0 || velocity.x < 0)
         {
             myAnimator.SetBool("Moving", true);
+            if (!audioSource.isPlaying && grounded == true)
+            {
+                audioSource.Play();
+            }
+            else if (grounded == false)
+            {
+                audioSource.Stop();
+            }
         }
         else if (velocity.x == 0)
         {
             myAnimator.SetBool("Moving", false);
+            audioSource.Stop();
         }
         
     }
@@ -272,6 +282,12 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         {
             grounded = false;
         }
+    }
+
+    void healthFlash()
+    {
+        myRenderer.color = healthUpColor;
+        Invoke("ResetColor", flashTime);
     }
 
     void damageFlash()
