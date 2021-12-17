@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3835823119739199144}
   - component: {fileID: 3835823119739199147}
   - component: {fileID: 3835823119739199140}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Flesh Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 6
   m_Sprite: {fileID: 8756131382280630494, guid: b15ee24522bd3cd41b76c5bcc509c8da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

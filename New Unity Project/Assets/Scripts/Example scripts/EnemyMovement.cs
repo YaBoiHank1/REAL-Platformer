@@ -26,7 +26,7 @@ public class EnemyMovement : MonoBehaviour
            }
            else
            {
-            myRigidbody.velocity = new Vector2(-moveSpeed, 0f);
+                myRigidbody.velocity = new Vector2(-moveSpeed, 0f);
            }
     }
 
