@@ -930,6 +930,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3835823119739199146, guid: 581464ed36747aa4e815a6353eba3bf2, type: 3}
   m_PrefabInstance: {fileID: 670143846}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &157441381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 823162145, guid: 40d8cd5fbe5aa7e4d88a6cac4fb1638b, type: 3}
+  m_PrefabInstance: {fileID: 1973518505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &190303927 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4090952209530142858, guid: 94fd9c50c65623a419d7ff04d338bb95, type: 3}
@@ -1560,6 +1571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Session
       objectReference: {fileID: 0}
+    - target: {fileID: 6483285666649287450, guid: f64da02a8f672b94986a8ab339f67958, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 157441381}
     - target: {fileID: 6483285666649287451, guid: f64da02a8f672b94986a8ab339f67958, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7998,7 +8013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1303964305230347336, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1303964305231302096, guid: 2226bf91dab4264429c18c3cacbeca37, type: 3}
       propertyPath: m_AnchorMax.y

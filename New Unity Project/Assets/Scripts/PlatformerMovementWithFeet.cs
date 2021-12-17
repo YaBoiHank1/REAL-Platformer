@@ -8,7 +8,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
 	public float moveSpeed = 1.0f;
     public float climbSpeed = 1.0f;
 	public float jumpSpeed = 1.0f;
-    public int health = 1;
+    public int health;
     public float flashTime;
     public int flesh;
 	private bool grounded = false;
@@ -47,6 +47,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
         defaultColor = myRenderer.color;
         myAnimator.SetBool("Moving", false);
         isAlive = true;
+        health = 2;
         escPressed = false;
         deathCanvas.enabled = false;
         pauseCanvas.enabled = false;
@@ -129,6 +130,7 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
     public void AddToHealth(int CoinValue)
     {
         health += CoinValue;
+        flesh++;
         //healthFlash();
     }
 
@@ -220,6 +222,10 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             health--;
             damageFlash();
             AudioSource.PlayClipAtPoint(hurtFX, Camera.main.transform.position);
+            if (flesh >= 1)
+            {
+                FindObjectOfType<GameSession>().score--;
+            }
         }
     }
 
@@ -250,6 +256,10 @@ public class PlatformerMovementWithFeet : MonoBehaviour {
             health--;
             AudioSource.PlayClipAtPoint(hurtFX, Camera.main.transform.position);
             damageFlash();
+            if (flesh >= 1)
+            {
+                FindObjectOfType<GameSession>().score--;
+            }
         }
         if (collision.gameObject.layer == 13)
         {
